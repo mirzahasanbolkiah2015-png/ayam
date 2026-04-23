@@ -1,11 +1,14 @@
 import * as React from "react";
 
-interface LabelProps extends React.LabelHTMLAttributes<HTMLLabelElement> {}
-
-export function Label({ className, ...props }: LabelProps) {
+export function Label(props: React.LabelHTMLAttributes<HTMLLabelElement>) {
   return (
     <label
-      className={`text-sm font-medium leading-none ${className || ""}`}
+      style={{
+        fontSize: "14px",
+        fontWeight: 500,
+        display: "block",
+        marginBottom: "4px"
+      }}
       {...props}
     />
   );
